@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #321fdb;
+  --primary-hover: #1b2e8f;
+  --sidebar: #3c4b64;
+  --input-border: #e5e7eb;
+  --input-focus-ring: rgba(50, 31, 219, 0.2);
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-[var(--primary)] 
+           hover:bg-[var(--primary-hover)] 
+           text-white 
+           font-medium 
+           rounded-md
+           transition-all 
+           duration-200
+           disabled:opacity-50
+           disabled:cursor-not-allowed;
+  }
+  
+  .input-field {
+    @apply mt-1 
+           block 
+           w-full 
+           px-4 
+           py-3
+           border-2
+           border-[var(--input-border)]
+           rounded-md 
+           shadow-sm
+           bg-white
+           text-gray-900
+           placeholder-gray-400
+           focus:outline-none 
+           focus:ring-2
+           focus:ring-[var(--input-focus-ring)]
+           focus:border-[var(--primary)]
+           transition-all
+           duration-200;
+  }
+}
